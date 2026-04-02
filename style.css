@@ -21,18 +21,18 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333
 .category-block { margin-bottom: 60px; }
 .category-title { font-size: 1.1rem; color: #0f172a; letter-spacing: 0.1em; margin-bottom: 30px; text-transform: uppercase; font-weight: 700; }
 
-/* --- FLEXBOX: Centers any number of cards while keeping max 3 per row --- */
+
 .team-cards-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* This centers the cards horizontally */
+    justify-content: center; 
     gap: 30px;
 }
 /* --- Team Card Styling --- */
 .team-card {
     width: 100%;
     max-width: 320px;
-    border: 2px solid transparent; /* Changed to 2px transparent so the card doesn't "jump" when the border appears on hover */
+    border: 2px solid transparent;
     border-radius: 16px;
     padding: 30px 20px;
     background-color: white;
@@ -43,11 +43,11 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333
     align-items: center;
 }
 
-/* This combines the hover float with the active yellow glow */
+
 .team-card:hover {
     transform: translateY(-8px);
-    border: 2px solid #facc15; /* Enactus Yellow Border */
-    box-shadow: 0 10px 25px -5px rgba(250, 204, 21, 0.3); /* Yellow Glow */
+    border: 2px solid #facc15; 
+    box-shadow: 0 10px 25px -5px rgba(250, 204, 21, 0.3); 
 }
 .active-card { border: 2px solid #facc15; box-shadow: 0 10px 25px -5px rgba(250, 204, 21, 0.3); }
 .team-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
