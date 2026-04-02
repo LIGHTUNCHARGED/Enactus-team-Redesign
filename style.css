@@ -1,0 +1,99 @@
+/* --- Global Styles --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; background-color: #f8fafc; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- Navigation Bar --- */
+.navbar { background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.nav-logo img { height: 45px; width: auto; display: block; }
+.nav-links { list-style: none; display: flex; gap: 35px; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: #0f172a; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; padding-bottom: 6px; border-bottom: 2px solid transparent; transition: all 0.2s ease; }
+.nav-links a:hover, .nav-links a.active { color: #facc15; }
+.nav-links a.active { border-bottom: 2px solid #facc15; }
+
+/* --- Team Section --- */
+.team-section { padding: 60px 0; text-align: center; }
+.main-title { font-size: 3rem; font-weight: 700; margin-bottom: 10px; color: #1e293b; }
+.section-subtitle { font-size: 1.1rem; color: #64748b; margin-bottom: 60px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* --- Category Blocks --- */
+.category-block { margin-bottom: 60px; }
+.category-title { font-size: 1.1rem; color: #0f172a; letter-spacing: 0.1em; margin-bottom: 30px; text-transform: uppercase; font-weight: 700; }
+
+/* --- FLEXBOX: Centers any number of cards while keeping max 3 per row --- */
+.team-cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* This centers the cards horizontally */
+    gap: 30px;
+}
+/* --- Team Card Styling --- */
+.team-card {
+    width: 100%;
+    max-width: 320px;
+    border: 2px solid transparent; /* Changed to 2px transparent so the card doesn't "jump" when the border appears on hover */
+    border-radius: 16px;
+    padding: 30px 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* This combines the hover float with the active yellow glow */
+.team-card:hover {
+    transform: translateY(-8px);
+    border: 2px solid #facc15; /* Enactus Yellow Border */
+    box-shadow: 0 10px 25px -5px rgba(250, 204, 21, 0.3); /* Yellow Glow */
+}
+.active-card { border: 2px solid #facc15; box-shadow: 0 10px 25px -5px rgba(250, 204, 21, 0.3); }
+.team-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+.card-image img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #f8fafc; margin-bottom: 15px; }
+.card-content h3 { font-size: 1.25rem; color: #1e293b; margin-bottom: 5px; font-weight: 600; }
+.card-content .role { color: #64748b; margin-bottom: 15px; font-size: 0.9rem; font-weight: 500; }
+
+.social-links { display: flex; justify-content: center; gap: 15px; margin-top: auto; }
+.social-icon { color: #94a3b8; font-size: 1.2rem; transition: color 0.2s, transform 0.2s; }
+.social-icon:hover { color: #1e293b; transform: scale(1.1); }
+
+/* --- Footer --- */
+.footer { background-color: #fefce8; background-image: linear-gradient(to bottom, #ffffff, #fefce8); color: #333; padding: 60px 0 20px 0; border-top: 1px solid #e2e8f0; }
+.footer-content-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px; }
+.footer-col { flex: 1; min-width: 250px; }
+.logo-slogan-col { display: flex; flex-direction: column; align-items: flex-start; }
+.footer-logo img { height: 45px; margin-bottom: 15px; }
+.slogan-text { font-weight: 700; font-size: 1.4rem; color: #1e293b; line-height: 1.4; }
+.highlight { color: #facc15; }
+
+.location-col p { font-size: 0.95rem; color: #475569; margin-bottom: 5px; }
+.footer-title { font-weight: 700; font-size: 1.1rem; color: #1e293b; margin-bottom: 15px; }
+
+.quick-links-col ul { list-style: none; }
+.quick-links-col ul li { margin-bottom: 10px; }
+.quick-links-col ul a { text-decoration: none; color: #475569; font-size: 0.95rem; transition: color 0.2s; }
+.quick-links-col ul a:hover { color: #facc15; }
+
+.footer-bottom-bar { border-top: 1px solid #e2e8f0; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; color: #64748b; flex-wrap: wrap; gap: 20px;}
+.contact-socials { display: flex; align-items: center; gap: 30px; }
+.contact-socials a { text-decoration: none; color: #475569; transition: color 0.2s; }
+.contact-socials a:hover { color: #facc15; }
+.social-icons { display: flex; gap: 15px; }
+.social-link { color: #0ea5e9; font-size: 1.2rem; transition: transform 0.2s; }
+.social-link:hover { transform: scale(1.15); }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+    /* 2 columns on tablets */
+    .team-cards-grid { grid-template-columns: repeat(2, minmax(250px, 320px)); }
+}
+@media (max-width: 768px) {
+    /* 1 column on phones */
+    .team-cards-grid { grid-template-columns: 1fr; max-width: 350px; }
+    .nav-links { display: none; /* Add mobile menu logic here later */ }
+    .footer-content-grid { flex-direction: column; }
+    .footer-bottom-bar { flex-direction: column; text-align: center; }
+}
